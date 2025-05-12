@@ -59,7 +59,7 @@ This repository contains a set of [Bruno](https://www.usebruno.com/) HTTP reques
 ## How to Use
 
 1. Open this collection in Bruno.
-2. Update the API keys in each request with your own Stripe test secret key for security.
+2. Update the API key under Auth tab -> username, replace `{{STRIPE_SECRET_KEY}}` with the secret key from https://dashboard.stripe.com/test/developers -> API keys
 3. Run the requests in sequence for a full payment flow:
    - Authenticate → Create Customer → Create Payment Method → Attach Payment Method → Create Payment Intent → Confirm Payment Intent
 4. Inspect responses and use as needed for your development or testing.
