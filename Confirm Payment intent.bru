@@ -1,0 +1,21 @@
+meta {
+  name: Confirm Payment intent
+  type: http
+  seq: 8
+}
+
+post {
+  url: https://api.stripe.com/v1/payment_intents/pi_3RNpByPqgdbQrVxb148KU9Vi/confirm
+  body: formUrlEncoded
+  auth: basic
+}
+
+auth:basic {
+  username: {{STRIPE_SECRET_KEY}}
+  password: 
+}
+
+body:form-urlencoded {
+  return_url: https://mystore/thankyoupage
+  payment_method: pm_1RNpCEPqgdbQrVxbs0lsj5Nc
+}

@@ -1,0 +1,16 @@
+meta {
+  name: Get Customers
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://api.stripe.com/v1/customers
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{STRIPE_SECRET_KEY}}
+  password: 
+}

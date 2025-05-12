@@ -1,0 +1,24 @@
+meta {
+  name: Create Payment intent
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://api.stripe.com/v1/payment_intents
+  body: formUrlEncoded
+  auth: basic
+}
+
+auth:basic {
+  username: {{STRIPE_SECRET_KEY}}
+  password: 
+}
+
+body:form-urlencoded {
+  amount: 9000
+  currency: usd
+  automatic_payment_methods[enabled]: true
+  customer: cus_SIQ1rRN36ZCZcD
+  receipt_email: receipt@stripe.com
+}

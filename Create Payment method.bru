@@ -1,0 +1,21 @@
+meta {
+  name: Create Payment method
+  type: http
+  seq: 6
+}
+
+post {
+  url: https://api.stripe.com/v1/payment_methods
+  body: formUrlEncoded
+  auth: basic
+}
+
+auth:basic {
+  username: {{STRIPE_SECRET_KEY}}
+  password: 
+}
+
+body:form-urlencoded {
+  type: card
+  card[token]: tok_mastercard
+}

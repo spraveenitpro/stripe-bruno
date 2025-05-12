@@ -1,0 +1,16 @@
+meta {
+  name: Authenticate
+  type: http
+  seq: 4
+}
+
+get {
+  url: https://api.stripe.com/v1/charges
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{STRIPE_SECRET_KEY}}
+  password: 
+}

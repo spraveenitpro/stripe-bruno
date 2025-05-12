@@ -1,0 +1,20 @@
+meta {
+  name: Attach Payment method
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://api.stripe.com/v1/payment_methods/pm_1RNpCEPqgdbQrVxbs0lsj5Nc/attach
+  body: formUrlEncoded
+  auth: basic
+}
+
+auth:basic {
+  username: {{STRIPE_SECRET_KEY}}
+  password: 
+}
+
+body:form-urlencoded {
+  customer: cus_SIQ1rRN36ZCZcD
+}

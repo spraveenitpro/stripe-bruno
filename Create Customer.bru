@@ -1,0 +1,21 @@
+meta {
+  name: Create Customer
+  type: http
+  seq: 5
+}
+
+post {
+  url: https://api.stripe.com/v1/customers
+  body: formUrlEncoded
+  auth: basic
+}
+
+auth:basic {
+  username: {{STRIPE_SECRET_KEY}}
+  password: 
+}
+
+body:form-urlencoded {
+  name: Janis Verdun
+  email: JaneD@gmail.com
+}
